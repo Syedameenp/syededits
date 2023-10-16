@@ -190,8 +190,8 @@ img {
 /*===== HOME =====*/
 .home {
   position: relative;
-  row-gap: 5rem;
-  padding: 4rem 0 5rem;
+  row-gap: 3rem;
+  padding: 4rem 0 0rem;
 }
 
 .home__data {
@@ -243,7 +243,7 @@ img {
   display: inline-block;
   background-color: var(--first-color);
   color: #fff;
-  padding: .75rem 2.5rem;
+  padding: 0.95rem 3.0rem;
   font-weight: var(--font-semi);
   border-radius: .5rem;
   transition: .3s;
@@ -253,6 +253,12 @@ img {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
 }
 
+.home__social{
+  padding: 10px 10px 10px;
+}
+.home__social:hover{
+  transform: translate(0, -10px );
+}
 /* ===== ABOUT =====*/
 .about__container {
   row-gap: 2rem;
@@ -261,6 +267,10 @@ img {
 
 .about__subtitle {
   margin-bottom: var(--mb-2);
+  font-size: var(--mb-4);
+}
+.about__text{
+  font-size: var(--normal-font-size);
 }
 
 .about__img {
@@ -284,6 +294,7 @@ img {
 
 .skills__text {
   margin-bottom: var(--mb-4);
+  font-size: large;
 }
 
 .skills__data {
@@ -292,7 +303,7 @@ img {
   align-items: center;
   position: relative;
   font-weight: var(--font-semi);
-  padding: .5rem 1rem;
+  padding: .6rem 1rem;
   margin-bottom: var(--mb-4);
   border-radius: .5rem;
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
