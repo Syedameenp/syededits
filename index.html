@@ -172,6 +172,7 @@
             </section>
 
             <!--===== CONTACT =====-->
+            <form onsubmit="sendEmail(); reset(); return false;">
             <section class="contact section" id="contact">
                 <h2 class="section-title">Contact</h2>
 
@@ -180,9 +181,10 @@
                         <input type="text" placeholder="Name" class="contact__input">
                         <input type="mail" placeholder="Email" class="contact__input">
                         <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enviar" class="contact__button button">
+                        <button type="submit" class="contact__button button">Send</button>
                     </form>
                 </div>
+            </form>
             </section>
         </main>
 
@@ -194,7 +196,7 @@
                 <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
                 <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
             </div>
-            <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
+            <p class="footer__copy">&#169; All rigths reserved</p>
         </footer>
 
 
@@ -203,5 +205,21 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js" ></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                    Host : "smtp.gmail.com",
+                    Username : "psyedameen@gmail.com",
+                    Password : "Supramk42jz",
+                    To : 'syedameense@gmail.com',
+                    From : document.getElementById("email").value,
+                    Subject : "New Contact Form Enquiry",
+                    Body : "And this is the body"
+                }).then(  
+                message => alert(message)
+                );
+            }
+        </script>
     </body>
 </html>
