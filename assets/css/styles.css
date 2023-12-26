@@ -8,8 +8,8 @@
   /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
   /* HSL color mode */
   --hue-color: 224;
-  --first-color: hsl(var(--hue-color), 89%, 60%);
-  --second-color: hsl(var(--hue-color), 56%, 12%);
+  --first-color:rgb(112, 112, 112);
+  --second-color:rgb(112, 112, 112);
   /*===== Fuente y tipografia =====*/
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
@@ -139,7 +139,7 @@ img {
 }
 
 .nav__item {
-  margin-bottom: var(--mb-4);
+  margin-bottom: ;
 }
 
 .nav__link {
@@ -158,11 +158,11 @@ img {
   height: 0.18rem;
   left: 0;
   top: 2rem;
-  background-color: var(--first-color);
+  background-color: rgb(0, 0, 0);
 }
 
 .nav__logo {
-  color: var(--second-color);
+  color: rgb(0, 0, 0);
 }
 
 .nav__toggle {
@@ -179,7 +179,7 @@ img {
   height: 0.18rem;
   left: 0;
   top: 2rem;
-  background-color: var(--first-color);
+  background-color: black;
 }
 
 /*=== Show menu ===*/
@@ -204,13 +204,13 @@ img {
 }
 
 .home__title-color {
-  color: var(--first-color);
+  color: rgb(101, 101, 101);
 }
 
-.home__social {
+/* .home__social {
   display: flex;
   flex-direction: column;
-}
+} */
 
 .home__social-icon {
   width: max-content;
@@ -219,9 +219,10 @@ img {
   color: var(--second-color);
 }
 
-.home__social-icon:hover {
+/* #home > div.home__social > a:nth-child(3) > svg:hover {
   color: var(--first-color);
-}
+} */
+
 
 .home__img {
   position: absolute;
@@ -241,11 +242,11 @@ img {
 /*BUTTONS*/
 .button {
   display: inline-block;
-  background-color: var(--first-color);
+  background-color: rgb(26, 26, 26);
   color: #fff;
   padding: 0.95rem 3.0rem;
   font-weight: var(--font-semi);
-  border-radius: .5rem;
+  border-radius:30px;
   transition: .3s;
 }
 
@@ -256,9 +257,18 @@ img {
 .home__social{
   padding: 10px 10px 10px;
 }
-.home__social:hover{
-  transform: translate(0, -10px );
+
+.instaicon:hover{
+  transform: translate(0, -5px );
 }
+
+.home__social_icons{
+  width: 15%;
+  -ms-text-autospace: 3/2;
+  object-fit: contain;
+}
+
+
 /* ===== ABOUT =====*/
 .about__container {
   row-gap: 2rem;
@@ -266,7 +276,7 @@ img {
 }
 
 .about__subtitle {
-  margin-bottom: var(--mb-2);
+  margin-bottom: ;
   font-size: var(--mb-4);
 }
 .about__text{
@@ -392,8 +402,8 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: var(--second-color);
-  color: #fff;
+  background-color: white;
+  color: #000000;
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
@@ -500,7 +510,7 @@ img {
     display: none;
   }
   .nav__link {
-    color: var(--second-color);
+    color: black;
   }
   .home {
     padding: 8rem 0 2rem;
@@ -538,4 +548,92 @@ img {
   .home__img {
     width: 450px;
   }
+}
+
+
+body{
+  background-color: rgb(17, 16, 16);
+}
+h1{
+  color: aliceblue;
+}
+.social-menu ul {
+  position: absolute;
+  top: 95%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.social-menu ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+.social-menu ul li .fa {
+  color: #000000;
+  font-size: 25px;
+  line-height: 50px;
+  transition: .5s;
+}
+.social-menu ul li .fa:hover {
+  color: #ffffff;
+}
+.social-menu ul li a {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  transition: 0.5s;
+  transform: translate(0,0px);
+  box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.social-menu ul li a:hover {
+  transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+  background-color: #222427;
+}
+.social-menu ul li:nth-child(2) a:hover {
+  background-color: #222427;
+}
+.social-menu ul li:nth-child(3) a:hover {
+  background-color: #f3113b;
+}
+.social-menu ul li:nth-child(4) a:hover {
+  background-color: #cd201f;
+}
+.social-menu ul li:nth-child(5) a:hover {
+  background-color: #0077B5;
+}
+h{
+  color: #0077B5;
+}
+.home__blob-img{
+  /* aspect-ratio: 16/9; */
+  height: -100%;
+  width: 136%;
+  padding: 10px 10px; 
+  margin: 10px 10px; 
+  object-fit: inherit;
+  }
+
+  #home > div.home__img > svg > image{
+
+    clip-path: polygon(9% 6%, 91% 29%, 99% 72%, 0 100%);
+}
+.footer__copy1{
+  padding: 10px 10px 10px 10px ;
+  margin: -62px 1px 37px;
+  font-size: var(--h3-font-size);
+  color: #000000;
+}
+.footer__copy2{
+  padding: 10px 10px 10px 10px;
+  margin: -59px 1px 40px;
+  font-size: var(--h3-font-size);
+  color: #000000;
 }
