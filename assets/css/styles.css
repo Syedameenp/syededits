@@ -638,16 +638,14 @@ h{
   font-size: var(--h3-font-size);
   color: #000000;
 }
-.newsletter{
-  padding: 10px 261px;
-  margin: 20px 20px 20px;
-  display: flex;
-  /* width: 100%; */
-  /* font-size: var(--normal-font-size); */
-  /* font-weight: var(--font-semi); */
-  /* padding: 1rem; */
-  /* border-radius: 0.5rem; */
-  /* border: 1.5px solid var(--second-color); */
-  /* outline: none; */
-  margin-bottom: var(--mb-4);
+
+#outer{
+  text-align: center;
+padding: 0px 10px;
+margin: 8px 10px;
+
+}
+
+#inner{
+  display: inline-block;
 }
