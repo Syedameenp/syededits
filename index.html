@@ -188,7 +188,7 @@
                             30 MIN PHONE CALL WITH SYED </p>
                             Unlock the potential of your content🚀 Let's hop on a call to dive deep into personalized strategies that will transform your online presence. Ready to elevate your content? Book a call now!🌟
                         </p> 
-                        <a href="https://calendly.com/syededitz/video-editor" class="buttonbook" target="_blank" >Schedule a meeting with syed<a>
+                        <a href="https://calendly.com/syededitz/syed" class="buttonbook" target="_blank" >Schedule a meeting with syed<a>
                     </div>                                   
                 </div>
                 
@@ -205,9 +205,9 @@
                 <div class="contact__container bd-grid">
                     <form action="" class="contact__form">
                         <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <button type="submit" class="contact__button button">Send</button>
+                        <input type="mail" placeholder="Email" class="contact__input" id="email">
+                        <textarea name="" id="message" cols="0" rows="10" class="contact__input"></textarea>
+                        <button onclick="sendEmail()" type="submit" class="contact__button button">Send</button>
                     </form>
                 </div>
             </form>
@@ -253,12 +253,13 @@
                     Host : "smtp.gmail.com",
                     Username : "psyedameen@gmail.com",
                     Password : "Supramk42jz",
-                    To : 'syedameense@gmail.com',
+                    To : 'farazullakhan7772@gmail.com',
                     From : document.getElementById("email").value,
                     Subject : "New Contact Form Enquiry",
-                    Body : "And this is the body"
-                }).then(  
-                message => alert(message)
+                    Body : document.getElementById("message").value,
+                }).then(function(message) {
+                alert("Email sent successfully");
+                }
                 );
             }
         </script>
