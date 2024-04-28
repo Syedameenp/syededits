@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <link rel="shortcut icon" type="syed-icone" href=Syededitzlogo.jpg>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- =====BOX ICONS===== -->>
@@ -244,24 +244,27 @@
         <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>
 
-        <!--===== MAIN JS =====-->
+        ===== MAIN JS =====
+        <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="4f83e509-4e9f-456b-af63-a0a3b7d5dfdc">
         <script src="assets/js/main.js"></script>
         <script src="https://smtpjs.com/v3/smtp.js" ></script>
         <script>
-            function sendEmail(){
-                Email.send({
-                    Host : "smtp.gmail.com",
-                    Username : "psyedameen@gmail.com",
-                    Password : "Supramk42jz",
-                    To : 'syedameense@gmail.com',
-                    From : document.getElementById("email").value,
-                    Subject : "New Contact Form Enquiry",
-                    Body : document.getElementById("message").value,
-                }).then(function(message) {
-                alert("Email sent successfully");
+                function sendEmail(){
+                    Email.send({
+                        Host : "smtp.gmail.com",
+                        Username : "psyedameen@gmail.com",
+                        Password : "Supramk42jz",
+                        To : 'syedameense@gmail.com',
+                        From : document.getElementById("email").value,
+                        Subject : "New Contact Form Enquiry",
+                        Body : document.getElementById("message").value,
+                    }).then(function(message) {
+                    alert("Email sent successfully");
+                    }
+                    );
                 }
-                );
-            }
         </script>
+        </form>
     </body>
 </html>
